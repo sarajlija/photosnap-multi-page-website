@@ -15,7 +15,9 @@ function Navbar() {
         </ul>
       </nav>
       <div>
-        <button className="btn btn-primary">get an invite</button>
+        <a href="/" className="get-link">
+          get an invite
+        </a>
       </div>
     </div>
   )
