@@ -14,7 +14,7 @@ function Home() {
         </div>
 
         <div className="image-hero">
-          <img src="/assets/home/desktop/create-and-share.jpg" alt="hero-img" />
+          <img src="/assets/home/desktop/create-and-share.jpg" alt="hero-img" className="img-fluid" />
         </div>
       </section>
     </main>
