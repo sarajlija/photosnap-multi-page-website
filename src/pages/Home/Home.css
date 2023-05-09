@@ -2,16 +2,18 @@
   width: 100%;
 }
 .banner-hero {
-  width: 100%;
+  max-width: 100%;
   display: flex;
 }
 .banner-hero .title-hero {
+  background-color: black;
+  color: #ffffff;
   max-width: 100%;
-  display: flex;
-  padding: 173px 100px;
-  flex-direction: column;
+  display: block;
+  padding: auto;
+  /*flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start;*/
   width: 42.36%;
   height: auto;
 }
@@ -19,6 +21,32 @@
   width: 57.64%;
 }
 .banner-hero .title-hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 4.16667px;
+}
+
+/*SECTION STORIES*/
+.section-stories {
+  max-width: 100%;
+  display: flex;
+}
+.section-stories .title-stories {
+  background-color: black;
+  color: #ffffff;
+  max-width: 100%;
+  display: block;
+  padding: auto;
+  /*flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;*/
+  width: 42.36%;
+  height: auto;
+}
+.section-stories .image-stories {
+  width: 57.64%;
+}
+.section-stories .title-stories h1 {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 4.16667px;
