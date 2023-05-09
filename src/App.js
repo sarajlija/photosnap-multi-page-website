@@ -1,13 +1,11 @@
 import Home from "./pages/Home/Home"
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+//import Navbar from "./components/Navbar"
+//import Footer from "./pages/Home/Footer"
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <div className="App">
       <Home />
-      <Footer />
     </div>
   )
 }

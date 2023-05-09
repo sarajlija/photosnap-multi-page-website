@@ -1,8 +1,11 @@
 import React from "react"
+import Navbar from "./Navbar"
 import "./Home.css"
+import Footer from "./Footer"
 function Home() {
   return (
     <main className="main">
+      <Navbar />
       <section className="banner-hero">
         <div className="title-hero">
           <h1>Create and share your photo stories. </h1>
@@ -16,6 +19,7 @@ function Home() {
           <img src="/assets/home/desktop/create-and-share.jpg" alt="hero-img" />
         </div>
       </section>
+      <Footer />
     </main>
   )
 }
