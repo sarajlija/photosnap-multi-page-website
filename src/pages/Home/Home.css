@@ -1,11 +1,11 @@
 .main {
   width: 100%;
 }
-.banner-hero {
+.home-hero {
   max-width: 100%;
   display: flex;
 }
-.banner-hero .title-hero {
+.home-hero .title-hero {
   background-color: black;
   color: #ffffff;
   max-width: 100%;
@@ -17,21 +17,21 @@
   width: 42.36%;
   height: auto;
 }
-.banner-hero .image-hero {
+.home-hero .image-hero {
   width: 57.64%;
 }
-.banner-hero .title-hero h1 {
+.home-hero .title-hero h1 {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 4.16667px;
 }
 
 /*SECTION STORIES*/
-.section-stories {
+.home-stories {
   max-width: 100%;
   display: flex;
 }
-.section-stories .title-stories {
+.home-stories .title-stories {
   background-color: black;
   color: #ffffff;
   max-width: 100%;
@@ -43,11 +43,57 @@
   width: 42.36%;
   height: auto;
 }
-.section-stories .image-stories {
+.home-stories .image-stories {
   width: 57.64%;
 }
-.section-stories .title-stories h1 {
+.home-stories .title-stories h1 {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 4.16667px;
+}
+/*SECTION DESIGNED*/
+.home-designed {
+  max-width: 100%;
+  display: flex;
+}
+.home-designed .title-designed {
+  background-color: black;
+  color: #ffffff;
+  max-width: 100%;
+  display: block;
+  padding: auto;
+  /*flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;*/
+  width: 42.36%;
+  height: auto;
+}
+.home-designed .image-designed {
+  width: 57.64%;
+}
+.home-designed .title-designed h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 4.16667px;
+}
+/*GALLERY*/
+.wrapper-image {
+  display: flex;
+  position: relative;
+}
+.wrapper-image > img {
+  max-width: 100%;
+  height: auto;
+}
+.card-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background-color: rgb(#ffffff, 0.2);
+  z-index: 1;
 }

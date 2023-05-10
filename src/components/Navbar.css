@@ -19,4 +19,5 @@ nav ul {
 nav ul li {
   margin-right: 37px;
   text-transform: uppercase;
+  cursor: pointer;
 }
