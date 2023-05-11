@@ -76,7 +76,7 @@ function Home() {
               <h5>The Mountains</h5>
               <small>by John Appleseed</small>
             </div>
-            <hr className="border-light" />
+            <hr className="" />
             <div>
               <a href="/">READ STORE</a>
             </div>

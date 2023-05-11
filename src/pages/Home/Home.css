@@ -108,3 +108,8 @@
   background-color: rgb(#ffffff, 0.2);
   z-index: 1;
 }
+.card-overlay hr {
+  width: 100%;
+  border-width: 1px;
+  opacity: 0.6;
+}
