@@ -3,6 +3,7 @@
 }
 .home-hero {
   max-width: 100%;
+
   display: flex;
 }
 .home-hero .title-hero {
@@ -10,10 +11,7 @@
   color: #ffffff;
   max-width: 100%;
   display: block;
-  padding: auto;
-  /*flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;*/
+  padding: 80px 5%;
   width: 42.36%;
   height: auto;
 }
@@ -23,7 +21,13 @@
 .home-hero .title-hero h1 {
   font-size: 40px;
   font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
   letter-spacing: 4.16667px;
+}
+.home-hero .title-hero p {
+  line-height: 25px;
+  font-size: 15px;
 }
 
 /*SECTION STORIES*/
@@ -33,10 +37,11 @@
 }
 .home-stories .title-stories {
   background-color: black;
+  padding: 80px 5%;
   color: #ffffff;
   max-width: 100%;
   display: block;
-  padding: auto;
+
   /*flex-direction: column;
   justify-content: center;
   align-items: flex-start;*/
@@ -51,6 +56,10 @@
   font-weight: 700;
   letter-spacing: 4.16667px;
 }
+.home-stories .title-stories p {
+  font-size: 15px;
+  line-height: 25px;
+}
 /*SECTION DESIGNED*/
 .home-designed {
   max-width: 100%;
@@ -59,9 +68,10 @@
 .home-designed .title-designed {
   background-color: black;
   color: #ffffff;
+
   max-width: 100%;
   display: block;
-  padding: auto;
+  padding: 80px 5%;
   /*flex-direction: column;
   justify-content: center;
   align-items: flex-start;*/
@@ -87,13 +97,14 @@
 }
 .card-overlay {
   display: flex;
+  padding: 0 10% 10% 15%;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
   position: absolute;
   width: 100%;
   height: 100%;
-  color: black;
+  color: #ffffff;
   background-color: rgb(#ffffff, 0.2);
   z-index: 1;
 }

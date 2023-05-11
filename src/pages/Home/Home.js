@@ -31,8 +31,8 @@ function Home() {
       </section>
       <section className="home-designed">
         <div className="title-designed">
-          <h1>Create and share your photo stories. </h1>
-          <p>Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</p>
+          <h1>DESIGNED FOR EVERYONE </h1>
+          <p>Photosnap can help you create stories that resonate with your audience. Our tool is designed for photographers of all levels, brands, businesses you name it. </p>
           <a href="/" className="get-link">
             GET AN INVITE
           </a>
@@ -76,7 +76,7 @@ function Home() {
               <h5>The Mountains</h5>
               <small>by John Appleseed</small>
             </div>
-            <hr />
+            <hr className="border-light" />
             <div>
               <a href="/">READ STORE</a>
             </div>
