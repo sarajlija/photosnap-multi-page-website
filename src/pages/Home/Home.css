@@ -90,6 +90,13 @@
 .wrapper-image {
   display: flex;
   position: relative;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+.wrapper-image:hover {
+  cursor: pointer;
+
+  transform: translateY(-20px);
 }
 .wrapper-image > img {
   max-width: 100%;
@@ -112,4 +119,26 @@
   width: 100%;
   border-width: 1px;
   opacity: 0.6;
+}
+
+/*HOME_FEATURES*/
+.features-wrapper {
+  padding: 8% 12%;
+  column-gap: 1.9rem;
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.features h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.features p {
+  text-align: center;
 }
