@@ -1,23 +1,34 @@
 import React from "react"
 import "./Navbar.css"
+import { Link } from "react-router-dom"
 
 function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar-brand">
-        <img src="/assets/shared/desktop/logo.svg" alt="logo" />
+        <Link to="/">
+          <img src="/assets/shared/desktop/logo.svg" alt="logo" />
+        </Link>
       </div>
       <nav>
         <ul>
-          <li>stories</li>
-          <li>features</li>
-          <li>pricing</li>
+          <li>
+            <Link to="/stories">stories</Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/features">features</Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/pricing">pricing</Link>
+          </li>
         </ul>
       </nav>
       <div>
-        <a href="/" className="get-link">
+        <Link to="/" className="get-link">
           get an invite
-        </a>
+        </Link>
       </div>
     </div>
   )

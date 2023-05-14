@@ -1,0 +1,28 @@
+.header-stories {
+  background-image: url("./desktop/moon-of-appalacia.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-title {
+  max-width: 64%;
+  padding: 6rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: #ffffff;
+}
+.header-title small {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.header-title h1 {
+  max-width: 53%;
+  font-size: 40px;
+}
+.header-title p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.6;
+}
