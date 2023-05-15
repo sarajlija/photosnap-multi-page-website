@@ -1,0 +1,75 @@
+/*HEADER_FEATURES*/
+
+.header-features {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+}
+.header-features .title-features {
+  background-color: black;
+  color: #ffffff;
+  max-width: 100%;
+  display: block;
+  padding: 80px 5%;
+  width: 42.36%;
+  height: auto;
+}
+.header-features .image-features {
+  width: 57.64%;
+}
+.header-features .title-features h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  letter-spacing: 4.16667px;
+}
+.header-features .title-features p {
+  line-height: 25px;
+  font-size: 15px;
+}
+
+/*SECTION_FEATURES*/
+
+.features-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 8% 12%;
+  column-gap: 1.9rem;
+  row-gap: 6rem;
+}
+.features-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.features-item h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.features-item p {
+  text-align: center;
+}
+
+/*FOOTER_FEATURES*/
+.footer-features {
+  background-image: url("./desktop/bg-beta.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer-heading {
+  max-width: 100%;
+  padding: 4rem 9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+.footer-heading h1 {
+  max-width: 30%;
+  font-size: 40px;
+}

@@ -26,3 +26,10 @@
   line-height: 25px;
   opacity: 0.6;
 }
+
+/*STORIES-GALLERY*/
+.stories-gallery {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}

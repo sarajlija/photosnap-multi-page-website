@@ -1,5 +1,6 @@
 import React from "react"
 import "./Home.css"
+import data from "../../data.json"
 
 function Home() {
   return (
@@ -29,6 +30,7 @@ function Home() {
           </a>
         </div>
       </section>
+
       <section className="home-designed">
         <div className="title-designed">
           <h1>DESIGNED FOR EVERYONE </h1>
@@ -42,60 +44,25 @@ function Home() {
           <img src="/assets/home/desktop/designed-for-everyone.jpg" alt="designed-img" className="img-fluid" />
         </div>
       </section>
-      <section className="home-gallery d-flex">
-        <div className="wrapper-image">
-          <img src="/assets/stories/desktop/mountains.jpg" alt="mountains-img" />
-          <div className="card-overlay">
-            <div className="card-title">
-              <h5>The Mountains</h5>
-              <small>by John Appleseed</small>
-            </div>
-            <hr />
-            <div>
-              <a href="/">READ STORE</a>
-            </div>
-          </div>
-        </div>
-        <div className="wrapper-image">
-          <img src="/assets/stories/desktop/cityscapes.jpg" alt="cityscapes-img" />
-          <div className="card-overlay">
-            <div className="card-title">
-              <h5>The Mountains</h5>
-              <small>by John Appleseed</small>
-            </div>
-            <hr />
-            <div>
-              <a href="/">READ STORE</a>
+      <section className="home-gallery">
+        {data.slice(0, 4).map((item, index) => (
+          <div className="wrapper-image " key={index}>
+            <img src={item.images.desktop} alt={item.name} />
+            <div className="card-overlay">
+              <div className="card-title">
+                <h5>{item.name}</h5>
+                <small>by John Appleseed</small>
+              </div>
+              <hr />
+              <div className="d-flex w-100 justify-content-between align-items-center">
+                <a href="/">READ STORE</a>
+                <img src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="wrapper-image">
-          <img src="/assets/stories/desktop/18-days-voyage.jpg" alt="18-days-voyage-img" />
-          <div className="card-overlay">
-            <div className="card-title">
-              <h5>The Mountains</h5>
-              <small>by John Appleseed</small>
-            </div>
-            <hr className="" />
-            <div>
-              <a href="/">READ STORE</a>
-            </div>
-          </div>
-        </div>
-        <div className="wrapper-image">
-          <img src="/assets/stories/desktop/architecturals.jpg" alt="architecturals-img" />
-          <div className="card-overlay">
-            <div className="card-title">
-              <h5>The Mountains</h5>
-              <small>by John Appleseed</small>
-            </div>
-            <hr />
-            <div>
-              <a href="/">READ STORE</a>
-            </div>
-          </div>
-        </div>
+        ))}
       </section>
+
       <section className="home-features d-flex">
         <div className="features-wrapper d-flex">
           <div className="features">
@@ -114,7 +81,6 @@ function Home() {
             <p>Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. </p>
           </div>
         </div>
-        <div></div>
       </section>
     </main>
   )
