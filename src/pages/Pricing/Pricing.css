@@ -1,0 +1,106 @@
+/*HEADER_FEATURES*/
+
+.header-pricing {
+  max-width: 100%;
+  display: flex;
+}
+.header-pricing .title-pricing {
+  background-color: black;
+  color: #ffffff;
+  max-width: 100%;
+  display: block;
+  padding: 10%5%;
+  width: 42.36%;
+  height: auto;
+}
+.header-pricing .image-pricing {
+  width: 57.64%;
+}
+.header-pricing .title-pricing h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  letter-spacing: 4.16667px;
+}
+.header-pricing .title-pricing p {
+  line-height: 25px;
+  font-size: 15px;
+}
+/*PRICING*/
+.section-pricing {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle-switch {
+  margin-top: 5%;
+}
+.pricing-wrapper {
+  padding: 3% 12%;
+  column-gap: 1.9rem;
+}
+.pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.8rem;
+}
+.pricing.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+.pricing h5 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 25px;
+
+  margin-bottom: 1rem;
+}
+.pricing p {
+  text-align: center;
+}
+
+.btn,
+.btn-left,
+.btn-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  border: 1px solid #000000;
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-right:hover:focus:active {
+  color: #000000;
+  background-color: #ffffff;
+}
+.btn-left:hover:focus:active {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+/*TOGGLE*/
+.table {
+  margin: 0 auto;
+  max-width: 600px;
+  margin-bottom: 140px;
+  font-size: 12px;
+}
+.table thead:first-child {
+  border-bottom: 1px solid #000000;
+}
+
+.table thead tr th:not(:first-child) {
+  text-align: center;
+}
+.table tbody tr td:not(:first-child) {
+  text-align: center;
+}

@@ -9,9 +9,6 @@ function Features() {
         <div className="title-features">
           <h1>FEATURES</h1>
           <p>We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories.</p>
-          <a href="/" className="get-link">
-            GET AN INVITE
-          </a>
         </div>
 
         <div className="image-features">
