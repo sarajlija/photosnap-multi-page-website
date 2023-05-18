@@ -2,7 +2,7 @@ import React from "react"
 import "./Home.css"
 import data from "../../data.json"
 
-function Home() {
+function Home({ windowWidth }) {
   return (
     <main className="main">
       <section className="home-hero">
@@ -15,12 +15,12 @@ function Home() {
         </div>
 
         <div className="image-hero">
-          <img src="/assets/home/desktop/create-and-share.jpg" alt="hero-img" className="img-fluid" />
+          <img src={windowWidth > 768 ? "/assets/home/desktop/create-and-share.jpg" : windowWidth > 576 ? "/assets/home/tablet/create-and-share.jpg" : "/assets/home/mobile/create-and-share.jpg"} alt="hero-img" className="img" />
         </div>
       </section>
       <section className="home-stories">
         <div className="image-stories">
-          <img src="/assets/home/desktop/beautiful-stories.jpg" alt="stories-img" className="img-fluid" />
+          <img src={windowWidth > 768 ? "/assets/home/desktop/beautiful-stories.jpg" : windowWidth > 576 ? "/assets/home/tablet/beautiful-stories.jpg" : "/assets/home/mobile/beautiful-stories.jpg"} alt="beautifull-store" className="img" />
         </div>
         <div className="title-stories">
           <h1>BEAUTIFUL STORIES EVERY TIME</h1>
@@ -41,13 +41,13 @@ function Home() {
         </div>
 
         <div className="image-designed">
-          <img src="/assets/home/desktop/designed-for-everyone.jpg" alt="designed-img" className="img-fluid" />
+          <img src={windowWidth > 768 ? "/assets/home/desktop/designed-for-everyone.jpg" : windowWidth > 576 ? "/assets/home/tablet/designed-for-everyone.jpg" : "/assets/home/mobile/designed-for-everyone.jpg"} alt="designed-img" className="img" />
         </div>
       </section>
-      <section className="home-gallery">
+      <section className="home-gallery ">
         {data.slice(0, 4).map((item, index) => (
           <div className="wrapper-image " key={index}>
-            <img src={item.images.desktop} alt={item.name} />
+            <img src={windowWidth > 768 ? item.images.desktop : windowWidth > 576 ? item.images.mobile : item.images.mobile} alt={item.name} />
             <div className="card-overlay">
               <div className="card-title">
                 <h5>{item.name}</h5>

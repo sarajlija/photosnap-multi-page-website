@@ -1,8 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import "./Navbar.css"
 import { Link } from "react-router-dom"
 
-function Navbar() {
+function Navbar({ windowWidth }) {
+  const [showClose, setShowClose] = useState(false)
+  const handleClick = () => {
+    console.log(showClose)
+    setShowClose(!showClose)
+  }
   return (
     <div className="navbar">
       <div className="navbar-brand">
@@ -10,7 +15,7 @@ function Navbar() {
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
         </Link>
       </div>
-      <nav>
+      <nav className={`${windowWidth < 576 ? "nav-desktop" : null}`}>
         <ul>
           <li>
             <Link to="/stories">stories</Link>
@@ -23,12 +28,21 @@ function Navbar() {
             {" "}
             <Link to="/pricing">pricing</Link>
           </li>
-        </ul>
+        </ul>{" "}
+        <div className="get-link">
+          <Link to="/" className="get-link">
+            get an invite
+          </Link>
+        </div>
       </nav>
-      <div>
-        <Link to="/" className="get-link">
-          get an invite
-        </Link>
+
+      <div className={`${windowWidth < 576 ? "show-mobile" : "hidde-mobile"}`}>
+        <button type="button" className={`close ${showClose ? "show-menu" : "hidde-menu"}`} onClick={handleClick}>
+          <img src="/assets/shared/mobile/close.svg" alt="close" />
+        </button>
+        <button type="button" className={`menu ${showClose ? "hidde-menu" : "show-menu"}`} onClick={handleClick}>
+          <img src="/assets/shared/mobile/menu.svg" alt="menu" />
+        </button>
       </div>
     </div>
   )

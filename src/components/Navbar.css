@@ -21,3 +21,34 @@ nav ul li {
   text-transform: uppercase;
   cursor: pointer;
 }
+.menu {
+  border: 0;
+  background-color: transparent;
+  transition: all 0.9s ease-in-out;
+}
+
+.show-menu {
+  display: none;
+}
+.close {
+  border: 0;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.hidde-close {
+  display: none;
+}
+.hidde-mobile {
+  display: none;
+}
+.show-mobile {
+  display: block;
+}
+
+.nav-desktop {
+  display: none;
+}
+.get-link {
+  margin-left: 2rem;
+}
