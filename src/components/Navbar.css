@@ -1,22 +1,24 @@
 .navbar {
+  position: relative;
   height: auto;
   width: 100%;
   background-color: #ffffff;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 2;
 }
-nav {
+.nav-desktop {
   display: flex;
   align-items: center;
 }
-nav ul {
+.nav-desktop ul {
   display: flex;
   align-items: center;
   margin-bottom: 0;
   list-style: none;
 }
-nav ul li {
+.nav-desktop ul li {
   margin-right: 37px;
   text-transform: uppercase;
   cursor: pointer;
@@ -43,12 +45,23 @@ nav ul li {
   display: none;
 }
 .show-mobile {
-  display: block;
+  display: flex;
 }
 
-.nav-desktop {
-  display: none;
+.nav-mobile {
+  position: absolute;
+  display: block;
+  background: white;
+  width: 100%;
+  height: 40vh;
+  transform: translateY(110px);
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
 }
+.nav-mobile .show-mobile {
+  transform: translateY(-100px);
+}
+
 .get-link {
   margin-left: 2rem;
 }
