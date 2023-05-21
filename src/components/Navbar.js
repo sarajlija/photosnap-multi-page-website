@@ -3,7 +3,7 @@ import "./Navbar.css"
 import { Link } from "react-router-dom"
 
 function Navbar({ windowWidth }) {
-  const [showClose, setShowClose] = useState(false)
+  const [showClose, setShowClose] = useState(true)
   const handleClick = () => {
     console.log(showClose)
     setShowClose(!showClose)
