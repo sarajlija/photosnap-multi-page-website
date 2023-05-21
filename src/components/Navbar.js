@@ -15,7 +15,8 @@ function Navbar({ windowWidth }) {
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
         </Link>
       </div>
-      <nav className={`${windowWidth > 576 ? "nav-desktop " : "hidde-mobile"} `}>
+      {/*<nav className={`${windowWidth > 576 ? "nav-desktop " : "hidde-mobile"} `}>*/}
+      <nav className={`nav-desktop nav-mobile ${showClose ? "show-mobile" : ""}`}>
         <ul>
           <li>
             <Link to="/stories">stories</Link>
@@ -35,7 +36,7 @@ function Navbar({ windowWidth }) {
           </Link>
         </div>
       </nav>
-      {showClose ||
+      {/*showClose ||
         (windowWidth < 576 && (
           <nav className="nav-mobile .show-mobile">
             <ul>
@@ -57,9 +58,9 @@ function Navbar({ windowWidth }) {
               </Link>
             </div>
           </nav>
-        ))}
+        ))*/}
 
-      <div className={`${windowWidth < 576 ? "show-mobile" : "hidde-mobile"}`}>
+      <div className="toggle-btn ">
         <button type="button" className={`close ${showClose ? "show-menu" : "hidde-menu"}`} onClick={handleClick}>
           <img src="/assets/shared/mobile/close.svg" alt="close" />
         </button>
