@@ -42,7 +42,8 @@ function Footer() {
         <div className="footer-links">
           <div>
             <a href="/" className="get-link">
-              get an invite
+              GET AN INVITE
+              <img className="ms-3" src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
             </a>
           </div>
           <div>

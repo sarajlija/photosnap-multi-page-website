@@ -1,11 +1,11 @@
-import { useState } from "react"
 import React from "react"
 import { Button, Form, Table } from "react-bootstrap"
 import { Link } from "react-router-dom"
-
+import { useGlobalContext } from "../../context"
 import "./Pricing.css"
 
 function Pricing() {
+  const { switchState, setSwitchState } = useGlobalContext()
   /* const [changeColor1, setChangeColor1] = useState(false)
   const [changeColor2, setChangeColor2] = useState(false)
   const [changeColor3, setChangeColor3] = useState(false)
@@ -18,7 +18,7 @@ function Pricing() {
   const handleClick3 = () => {
     setChangeColor3(!changeColor3)
   }*/
-  const [switchState, setSwitchState] = useState(false)
+
   const handleChange = e => {
     // setField("gtc", e.target.checked)
     setSwitchState(!switchState)
@@ -32,8 +32,8 @@ function Pricing() {
           <p>Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos.</p>
         </div>
 
-        <div className="image-features">
-          <img src="/assets/pricing/desktop/hero.jpg" alt="hero-img" className="img-fluid" />
+        <div className="image-pricing">
+          <img src="/assets/pricing/desktop/hero.jpg" alt="hero-img" />
         </div>
       </header>
       <section className="section-pricing">
@@ -150,7 +150,7 @@ function Pricing() {
         <div className="footer-heading ">
           <h1>We’re in beta. Get your invite today!</h1>
 
-          <div>
+          <div className="justify-content-start">
             <Link to="/">READ STORE</Link>
             <img className="ms-3" src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
           </div>

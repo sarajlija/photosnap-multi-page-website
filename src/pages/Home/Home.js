@@ -1,10 +1,13 @@
 import React from "react"
 import "./Home.css"
 import data from "../../data.json"
+import { useGlobalContext } from "../../context"
 
 function Home({ windowWidth }) {
+  const { showClose } = useGlobalContext()
+  console.log(showClose)
   return (
-    <main className="main">
+    <main className={showClose ? "" : "filter"}>
       <section className="home-hero">
         <div className="title-hero">
           <h1>Create and share your photo stories. </h1>
@@ -13,7 +16,6 @@ function Home({ windowWidth }) {
             GET AN INVITE
           </a>
         </div>
-
         <div className="image-hero">
           <img src={windowWidth > 768 ? "/assets/home/desktop/create-and-share.jpg" : windowWidth > 576 ? "/assets/home/tablet/create-and-share.jpg" : "/assets/home/mobile/create-and-share.jpg"} alt="hero-img" className="img" />
         </div>
@@ -30,7 +32,6 @@ function Home({ windowWidth }) {
           </a>
         </div>
       </section>
-
       <section className="home-designed">
         <div className="title-designed">
           <h1>DESIGNED FOR EVERYONE </h1>
@@ -39,7 +40,6 @@ function Home({ windowWidth }) {
             GET AN INVITE
           </a>
         </div>
-
         <div className="image-designed">
           <img src={windowWidth > 768 ? "/assets/home/desktop/designed-for-everyone.jpg" : windowWidth > 576 ? "/assets/home/tablet/designed-for-everyone.jpg" : "/assets/home/mobile/designed-for-everyone.jpg"} alt="designed-img" className="img" />
         </div>

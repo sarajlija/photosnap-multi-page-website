@@ -1,5 +1,10 @@
 /*HEADER_FEATURES*/
-
+a {
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #ffffff;
+}
 .header-features {
   max-width: 100%;
   display: flex;
@@ -15,6 +20,11 @@
 }
 .header-features .image-features {
   width: 57.64%;
+}
+.header-features .image-features img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .header-features .title-features h1 {
   font-size: 40px;
@@ -71,4 +81,35 @@
 .footer-heading h1 {
   max-width: 30%;
   font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .header-features {
+    flex-direction: column-reverse;
+  }
+  .header-features .image-features {
+    width: 100%;
+  }
+  .header-features .title-features {
+    width: 100%;
+  }
+  .footer-heading {
+    flex-direction: column;
+  }
+  .footer-heading {
+    max-width: 100%;
+    padding: 64px 32px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffffff;
+  }
+  .footer-heading h1 {
+    max-width: 100%;
+  }
+  .features-link {
+    margin-top: 1.5rem;
+    align-self: flex-start;
+  }
 }

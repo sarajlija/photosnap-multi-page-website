@@ -53,7 +53,7 @@ function Features() {
         <div className="footer-heading ">
           <h1>We’re in beta. Get your invite today!</h1>
 
-          <div>
+          <div className="features-link">
             <Link to="/">READ STORE</Link>
             <img className="ms-3" src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
           </div>

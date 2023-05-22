@@ -20,7 +20,7 @@ function Stories() {
       </header>
       <section className="stories-gallery">
         {data.map((item, index) => (
-          <div className="wrapper-image " key={index}>
+          <div className="wrapper-image" key={index}>
             <img src={item.images.desktop} alt={item.name} />
             <div className="card-overlay">
               <small>{item.date}</small>

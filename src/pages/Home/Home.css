@@ -1,6 +1,3 @@
-.main {
-  width: 100%;
-}
 .home-hero {
   max-width: 100%;
   display: flex;
@@ -155,6 +152,16 @@
 /*MEDIAQURY*/
 
 @media (max-width: 768px) {
+  .home-hero {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .home-hero .image-hero {
+    width: 100%;
+  }
+  .home-hero .title-hero {
+    width: 100%;
+  }
   .home-gallery {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;

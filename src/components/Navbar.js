@@ -1,9 +1,8 @@
-import React, { useState } from "react"
 import "./Navbar.css"
 import { Link } from "react-router-dom"
-
-function Navbar({ windowWidth }) {
-  const [showClose, setShowClose] = useState(true)
+import { useGlobalContext } from "../context"
+function Navbar() {
+  const { showClose, setShowClose } = useGlobalContext()
   const handleClick = () => {
     console.log(showClose)
     setShowClose(!showClose)

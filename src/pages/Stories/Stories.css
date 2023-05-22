@@ -33,3 +33,28 @@
 
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+.stories-gallery .wrapper-imgage img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .header-stories {
+    background-image: url("./tablet/moon-of-appalacia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .header-title {
+    max-width: 100%;
+    padding-left: 40px;
+    padding-top: 122px;
+  }
+}
+@media (max-width: 576px) {
+  .header-stories {
+    background-image: url("./mobile/moon-of-appalacia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
