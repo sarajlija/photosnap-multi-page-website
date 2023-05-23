@@ -42,7 +42,7 @@ function Pricing() {
             {" "}
             <span className="me-3">mounts</span>
             <label className="switch">
-              <input type="checkbox" checked />
+              <input type="checkbox" />
               <span className="slider round"></span>
             </label>
             <span className="ms-2">years</span>
