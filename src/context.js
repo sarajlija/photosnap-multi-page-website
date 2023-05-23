@@ -3,6 +3,7 @@ const AppContext = React.createContext()
 const AppProvider = ({ children }) => {
   const [showClose, setShowClose] = useState(true)
   const [switchState, setSwitchState] = useState(false)
+  const [showNav, setShowNav] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   useEffect(() => {
@@ -24,7 +25,9 @@ const AppProvider = ({ children }) => {
         setShowClose,
         switchState,
         setSwitchState,
-        windowWidth
+        windowWidth,
+        showNav,
+        setShowNav
       }}
     >
       {children}

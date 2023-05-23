@@ -2,10 +2,13 @@ import "./Navbar.css"
 import { Link } from "react-router-dom"
 import { useGlobalContext } from "../context"
 function Navbar() {
-  const { showClose, setShowClose } = useGlobalContext()
+  const { showClose, setShowClose, showNav, setShowNav } = useGlobalContext()
   const handleClick = () => {
     console.log(showClose)
     setShowClose(!showClose)
+  }
+  const handleClickNav = () => {
+    setShowNav(!showNav)
   }
   return (
     <div className="navbar">
@@ -15,9 +18,9 @@ function Navbar() {
         </Link>
       </div>
       {/*<nav className={`${windowWidth > 576 ? "nav-desktop " : "hidde-mobile"} `}>*/}
-      <nav className={`nav-desktop nav-mobile ${showClose ? "show-mobile" : ""}`}>
+      <nav className={`nav-desktop nav-mobile ${showClose ? "show-mobile" : ""} `}>
         <ul>
-          <li>
+          <li onClick={handleClickNav}>
             <Link to="/stories">stories</Link>
           </li>
           <li>
@@ -29,6 +32,7 @@ function Navbar() {
             <Link to="/pricing">pricing</Link>
           </li>
         </ul>{" "}
+        <hr className="hr-mobile" />
         <div className="get-link">
           <Link to="/" className="get-link">
             get an invite

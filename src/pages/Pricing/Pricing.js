@@ -1,11 +1,11 @@
 import React from "react"
-import { Button, Form, Table } from "react-bootstrap"
+import { Button, Table } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import { useGlobalContext } from "../../context"
 import "./Pricing.css"
 
 function Pricing() {
-  const { switchState, setSwitchState, windowWidth } = useGlobalContext()
+  const { switchState, setSwitchState, windowWidth, showClose } = useGlobalContext()
   /* const [changeColor1, setChangeColor1] = useState(false)
   const [changeColor2, setChangeColor2] = useState(false)
   const [changeColor3, setChangeColor3] = useState(false)
@@ -19,13 +19,13 @@ function Pricing() {
     setChangeColor3(!changeColor3)
   }*/
 
-  const handleChange = e => {
+  const handleChange = () => {
     // setField("gtc", e.target.checked)
     setSwitchState(!switchState)
   }
   console.log(switchState)
   return (
-    <main>
+    <main className={!showClose && windowWidth < 576 ? "filter" : ""}>
       <header className="header-pricing">
         <div className="title-pricing">
           <h1>PRICING</h1>
@@ -40,12 +40,12 @@ function Pricing() {
         <div className="toggle-switch">
           <form className="d-flex">
             {" "}
-            <span className="me-3">mounts</span>
+            <span className="me-3">mountly</span>
             <label className="switch">
-              <input type="checkbox" />
+              <input type="checkbox" onChange={handleChange} />
               <span className="slider round"></span>
             </label>
-            <span className="ms-2">years</span>
+            <span className="ms-3">yearly</span>
           </form>
         </div>
         <div className="pricing-wrapper d-flex">
@@ -53,7 +53,7 @@ function Pricing() {
             <h5>Basic</h5>
             <p>Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
             <h2>{switchState ? "$190" : "$19"}</h2>
-            <small>{switchState ? "per year" : "per mount"}</small>
+            <small>{switchState ? "per mount" : "per year"}</small>
             <Button href="#/" bsPrefix="btn btn-left">
               PICK PLAN
             </Button>

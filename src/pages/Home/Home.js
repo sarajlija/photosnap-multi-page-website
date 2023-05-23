@@ -7,7 +7,7 @@ function Home() {
   const { showClose, windowWidth } = useGlobalContext()
   console.log(showClose)
   return (
-    <main className={showClose ? "" : "filter"}>
+    <main className={!showClose && windowWidth < 576 ? "filter" : ""}>
       <section className="home-hero">
         <div className="title-hero">
           <h1>Create and share your photo stories. </h1>

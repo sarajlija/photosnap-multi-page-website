@@ -3,9 +3,9 @@ import "./Features.css"
 import { Link } from "react-router-dom"
 import { useGlobalContext } from "../../context"
 function Features() {
-  const { windowWidth } = useGlobalContext()
+  const { windowWidth, showClose } = useGlobalContext()
   return (
-    <main>
+    <main className={!showClose && windowWidth < 576 ? "filter" : ""}>
       <header className="header-features">
         <div className="title-features">
           <h1>FEATURES</h1>

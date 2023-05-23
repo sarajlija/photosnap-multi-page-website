@@ -4,10 +4,10 @@ import { Link } from "react-router-dom"
 import data from "../../data.json"
 import { useGlobalContext } from "../../context"
 function Stories() {
-  const { windowWidth } = useGlobalContext()
+  const { windowWidth, showClose } = useGlobalContext()
   console.log(windowWidth)
   return (
-    <main>
+    <main className={!showClose && windowWidth < 576 ? "filter" : ""}>
       {windowWidth > 576 ? (
         <header className="header-stories">
           <div className="header-title ">
