@@ -1,33 +1,36 @@
 import "./Navbar.css"
 import { Link } from "react-router-dom"
 import { useGlobalContext } from "../context"
+
 function Navbar() {
-  const { showClose, setShowClose, showNav, setShowNav } = useGlobalContext()
+  const { showClose, setShowClose } = useGlobalContext()
   const handleClick = () => {
     console.log(showClose)
+
     setShowClose(!showClose)
   }
   const handleClickNav = () => {
-    setShowNav(!showNav)
+    setShowClose(true)
   }
   return (
     <div className="navbar">
-      <div className="navbar-brand">
+      <div className="navbar-brand" onClick={handleClickNav}>
         <Link to="/">
           <img src="/assets/shared/desktop/logo.svg" alt="logo" />
         </Link>
       </div>
       {/*<nav className={`${windowWidth > 576 ? "nav-desktop " : "hidde-mobile"} `}>*/}
+
       <nav className={`nav-desktop nav-mobile ${showClose ? "show-mobile" : ""} `}>
         <ul>
           <li onClick={handleClickNav}>
             <Link to="/stories">stories</Link>
           </li>
-          <li>
+          <li onClick={handleClickNav}>
             {" "}
             <Link to="/features">features</Link>
           </li>
-          <li>
+          <li onClick={handleClickNav}>
             {" "}
             <Link to="/pricing">pricing</Link>
           </li>
@@ -39,6 +42,7 @@ function Navbar() {
           </Link>
         </div>
       </nav>
+
       {/*showClose ||
         (windowWidth < 576 && (
           <nav className="nav-mobile .show-mobile">
