@@ -3,8 +3,8 @@ import "./Home.css"
 import data from "../../data.json"
 import { useGlobalContext } from "../../context"
 
-function Home({ windowWidth }) {
-  const { showClose } = useGlobalContext()
+function Home() {
+  const { showClose, windowWidth } = useGlobalContext()
   console.log(showClose)
   return (
     <main className={showClose ? "" : "filter"}>

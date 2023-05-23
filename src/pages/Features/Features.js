@@ -1,8 +1,9 @@
 import React from "react"
 import "./Features.css"
 import { Link } from "react-router-dom"
-
+import { useGlobalContext } from "../../context"
 function Features() {
+  const { windowWidth } = useGlobalContext()
   return (
     <main>
       <header className="header-features">
@@ -12,7 +13,7 @@ function Features() {
         </div>
 
         <div className="image-features">
-          <img src="/assets/features/desktop/hero.jpg" alt="hero-img" className="img-fluid" />
+          <img src={windowWidth > 768 ? "/assets/features/desktop/hero.jpg" : windowWidth > 576 ? "/assets/features/tablet/hero.jpg" : "/assets/features/mobile/hero.jpg"} alt="hero-img" className="img-fluid" />
         </div>
       </header>
       <section className="section-features ">

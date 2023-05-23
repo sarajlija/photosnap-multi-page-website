@@ -5,7 +5,7 @@ import { useGlobalContext } from "../../context"
 import "./Pricing.css"
 
 function Pricing() {
-  const { switchState, setSwitchState } = useGlobalContext()
+  const { switchState, setSwitchState, windowWidth } = useGlobalContext()
   /* const [changeColor1, setChangeColor1] = useState(false)
   const [changeColor2, setChangeColor2] = useState(false)
   const [changeColor3, setChangeColor3] = useState(false)
@@ -33,22 +33,20 @@ function Pricing() {
         </div>
 
         <div className="image-pricing">
-          <img src="/assets/pricing/desktop/hero.jpg" alt="hero-img" />
+          <img src={windowWidth > 768 ? "/assets/pricing/desktop/hero.jpg" : windowWidth > 576 ? "/assets/pricing/tablet/hero.jpg" : "/assets/pricing/mobile/hero.jpg"} alt="hero-img" className="img" />
         </div>
       </header>
       <section className="section-pricing">
         <div className="toggle-switch">
-          <Form className="d-flex">
+          <form className="d-flex">
             {" "}
             <span className="me-3">mounts</span>
-            <Form.Check // prettier-ignore
-              type="switch"
-              id="custom-switch"
-              defaultChecked={switchState}
-              onChange={handleChange}
-            />{" "}
+            <label className="switch">
+              <input type="checkbox" checked />
+              <span className="slider round"></span>
+            </label>
             <span className="ms-2">years</span>
-          </Form>
+          </form>
         </div>
         <div className="pricing-wrapper d-flex">
           <div className="pricing">

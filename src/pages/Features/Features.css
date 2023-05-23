@@ -85,13 +85,13 @@ a {
 
 @media (max-width: 768px) {
   .header-features {
-    flex-direction: column-reverse;
+    flex-direction: row;
   }
   .header-features .image-features {
-    width: 100%;
+    width: 35.55%;
   }
   .header-features .title-features {
-    width: 100%;
+    width: 64.45%;
   }
   .footer-heading {
     flex-direction: column;
@@ -111,5 +111,19 @@ a {
   .features-link {
     margin-top: 1.5rem;
     align-self: flex-start;
+  }
+}
+@media (max-width: 576px) {
+  .header-features {
+    flex-direction: column-reverse;
+  }
+  .header-features .image-features {
+    width: 100%;
+  }
+  .header-features .image-features img {
+    width: 100%;
+  }
+  .header-features .title-features {
+    width: 100%;
   }
 }
