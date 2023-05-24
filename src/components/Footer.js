@@ -1,10 +1,12 @@
 import React from "react"
 import "./Footer.css"
+import { Link } from "react-router-dom"
 import ReactFacebook from "../social/facebook.svg"
 import ReactYoutube from "../social/youtube.svg"
 import ReactInstagram from "../social/twitter.svg"
 import ReactPinterest from "../social/instagram.svg"
 import ReactTwitter from "../social/pinterest.svg"
+
 function Footer() {
   return (
     <footer>
@@ -15,10 +17,20 @@ function Footer() {
           </div>
 
           <ul className="footer-nav">
-            <li>home</li>
-            <li>stories</li>
-            <li>features</li>
-            <li>pricing</li>
+            <li>
+              <Link to="/">home</Link>
+            </li>
+            <li>
+              <Link to="/stories">stories</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/#features">features</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="/pricing">pricing</Link>
+            </li>
           </ul>
 
           <ul className="social-list">

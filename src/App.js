@@ -5,11 +5,8 @@ import Stories from "./pages/Stories/Stories"
 import Features from "./pages/Features/Features"
 import Pricing from "./pages/Pricing/Pricing"
 import { Routes, Route } from "react-router-dom"
-import { useGlobalContext } from "./context"
 
 function App() {
-  const { windowWidth } = useGlobalContext()
-  console.log(windowWidth)
   return (
     <>
       <Navbar />

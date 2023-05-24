@@ -5,7 +5,8 @@ import data from "../../data.json"
 import { useGlobalContext } from "../../context"
 function Stories() {
   const { windowWidth, showClose } = useGlobalContext()
-  console.log(windowWidth)
+  window.scrollTo({ top: 0, behavior: "smooth" })
+
   return (
     <main className={!showClose && windowWidth < 576 ? "filter" : ""}>
       {windowWidth > 576 ? (

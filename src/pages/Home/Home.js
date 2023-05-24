@@ -5,15 +5,16 @@ import { useGlobalContext } from "../../context"
 
 function Home() {
   const { showClose, windowWidth } = useGlobalContext()
-  console.log(showClose)
+  window.scrollTo({ top: 0, behavior: "smooth" })
   return (
     <main className={!showClose && windowWidth < 576 ? "filter" : ""}>
       <section className="home-hero">
+        <div className="vertical-line"></div>
         <div className="title-hero">
           <h1>Create and share your photo stories. </h1>
           <p>Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</p>
           <a href="/" className="get-link">
-            GET AN INVITE
+            GET AN INVITE <img className="ms-3" src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
           </a>
         </div>
         <div className="image-hero">
@@ -27,9 +28,12 @@ function Home() {
         <div className="title-stories">
           <h1>BEAUTIFUL STORIES EVERY TIME</h1>
           <p>We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.</p>
-          <a href="/" className="get-link">
-            GET AN INVITE
-          </a>
+          <div className="link-stories d-flex">
+            <a href="/">
+              VIEW THE STORIES
+              <img className="ms-3" src="/assets/shared/desktop/arrow.svg" alt="arrow" />
+            </a>
+          </div>
         </div>
       </section>
       <section className="home-designed">
@@ -47,8 +51,11 @@ function Home() {
       <section className="home-gallery ">
         {data.slice(0, 4).map((item, index) => (
           <div className="wrapper-image " key={index}>
+            {" "}
+            <div className="horizontal-line"></div>
             <img src={windowWidth > 768 ? item.images.desktop : windowWidth > 576 ? item.images.mobile : item.images.mobile} alt={item.name} />
             <div className="card-overlay">
+              {" "}
               <div className="card-title">
                 <h5>{item.name}</h5>
                 <small>by John Appleseed</small>

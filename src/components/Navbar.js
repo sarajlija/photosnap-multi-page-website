@@ -36,7 +36,7 @@ function Navbar() {
           </li>
         </ul>{" "}
         <hr className="hr-mobile" />
-        <div className="get-link">
+        <div className="get-link" onClick={handleClickNav}>
           <Link to="/" className="get-link">
             get an invite
           </Link>

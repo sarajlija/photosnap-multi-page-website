@@ -6,24 +6,12 @@ import "./Pricing.css"
 
 function Pricing() {
   const { switchState, setSwitchState, windowWidth, showClose } = useGlobalContext()
-  /* const [changeColor1, setChangeColor1] = useState(false)
-  const [changeColor2, setChangeColor2] = useState(false)
-  const [changeColor3, setChangeColor3] = useState(false)
-  const handleClick1 = () => {
-    setChangeColor1(!changeColor1)
-  }
-  const handleClick2 = () => {
-    setChangeColor2(!changeColor2)
-  }
-  const handleClick3 = () => {
-    setChangeColor3(!changeColor3)
-  }*/
 
+  window.scrollTo({ top: 0, behavior: "smooth" })
   const handleChange = () => {
-    // setField("gtc", e.target.checked)
     setSwitchState(!switchState)
   }
-  console.log(switchState)
+
   return (
     <main className={!showClose && windowWidth < 576 ? "filter" : ""}>
       <header className="header-pricing">
