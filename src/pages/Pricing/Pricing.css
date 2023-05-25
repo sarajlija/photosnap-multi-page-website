@@ -149,13 +149,32 @@ input:checked + .slider:before {
   opacity: 0.6;
 }
 
-.btn,
-.btn-left,
+.btn-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  padding: 12px 24px;
+  margin-top: 1.5rem;
+  width: 100%;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+}
+.btn-active:hover {
+  background-color: #dfdfdf;
+  color: #000000;
+}
+.btn-active:focus {
+  background-color: #dfdfdf;
+  border: none;
+}
 .btn-right {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0;
+  padding: 12px 24px;
   border: 1px solid #000000;
   margin-top: 1.5rem;
   width: 100%;
@@ -163,20 +182,25 @@ input:checked + .slider:before {
   color: #ffffff;
   cursor: pointer;
 }
-.btn-active {
-  background-color: #ffffff;
-  color: #000000;
-}
-.btn-active:hover:focus {
-  background-color: #dfdfdf;
-  color: #000000;
-}
-
-.btn-right:hover:focus:active {
+.btn-right:hover {
   color: #000000;
   background-color: #ffffff;
+  border: 1px solid #000000;
 }
-.btn-left:hover:focus:active {
+.btn-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  padding: 12px 24px;
+  border: 1px solid #000000;
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+.btn-left:hover {
   color: #000000;
   background-color: #ffffff;
   border: 1px solid #000000;

@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Table } from "react-bootstrap"
+import { Table } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import { useGlobalContext } from "../../context"
 import "./Pricing.css"
@@ -42,27 +42,27 @@ function Pricing() {
             <p>Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
             <h2>{switchState ? "$190" : "$19"}</h2>
             <small>{switchState ? "per mount" : "per year"}</small>
-            <Button href="#/" bsPrefix="btn btn-left">
+            <button href="#/" className="btn-left">
               PICK PLAN
-            </Button>
+            </button>
           </div>
           <div className="pricing active">
             <h5>Pro</h5>
             <p>More advanced features available. Recommended for photography veterans and professionals.</p>
             <h2>{switchState ? "$390" : "$39"}</h2>
             <small>per mount</small>
-            <Button href="#/" className="btn-active">
+            <button href="#/" className="btn-active">
               PICK PLAN
-            </Button>
+            </button>
           </div>
           <div className="pricing">
             <h5>Business</h5>
             <p>Additional features available such as more detailed metrics. Recommended for business owners.</p>
             <h2>{switchState ? "$990" : "$99"}</h2>
             <small>per mount</small>
-            <Button href="#/" bsPrefix="btn btn-right">
+            <button href="#/" className="btn-right">
               PICK PLAN
-            </Button>
+            </button>
           </div>
         </div>
       </section>
