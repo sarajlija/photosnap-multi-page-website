@@ -13,7 +13,7 @@ function Home() {
         <div className="title-hero">
           <h1>Create and share your photo stories. </h1>
           <p>Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</p>
-          <a href="/" className="get-link">
+          <a href="/" className="home-get-link">
             GET AN INVITE <img className="ms-3" src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
           </a>
         </div>
@@ -28,21 +28,23 @@ function Home() {
         <div className="title-stories">
           <h1>BEAUTIFUL STORIES EVERY TIME</h1>
           <p>We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.</p>
-          <div className="link-stories d-flex">
-            <a href="/">
-              VIEW THE STORIES
-              <img className="ms-3" src="/assets/shared/desktop/arrow.svg" alt="arrow" />
-            </a>
-          </div>
+
+          <a href="/" className="link-stories">
+            VIEW THE STORIES
+            <img className="ms-3" src="/assets/shared/desktop/arrow.svg" alt="arrow" />
+          </a>
         </div>
       </section>
       <section className="home-designed">
         <div className="title-designed">
           <h1>DESIGNED FOR EVERYONE </h1>
           <p>Photosnap can help you create stories that resonate with your audience. Our tool is designed for photographers of all levels, brands, businesses you name it. </p>
-          <a href="/" className="get-link">
-            GET AN INVITE
-          </a>
+          <div className="link-stories__designed">
+            <a href="/" className="link-designed">
+              VIEW THE STORIES
+              <img className="ms-3" src="/assets/shared/desktop/arrow.svg" alt="arrow" />
+            </a>
+          </div>
         </div>
         <div className="image-designed">
           <img src={windowWidth > 768 ? "/assets/home/desktop/designed-for-everyone.jpg" : windowWidth > 576 ? "/assets/home/tablet/designed-for-everyone.jpg" : "/assets/home/mobile/designed-for-everyone.jpg"} alt="designed-img" className="img" />
@@ -62,8 +64,10 @@ function Home() {
               </div>
               <hr />
               <div className="d-flex w-100 justify-content-between align-items-center">
-                <a href="/">READ STORE</a>
-                <img src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
+                <a href="/" className="d-flex w-100 justify-content-between align-items-center">
+                  READ STORE
+                  <img src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
+                </a>
               </div>
             </div>
           </div>

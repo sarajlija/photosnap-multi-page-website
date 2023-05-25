@@ -112,6 +112,7 @@ input:checked + .slider:before {
   padding: 3% 12%;
   column-gap: 1.9rem;
 }
+
 .pricing {
   display: flex;
   flex-direction: column;
@@ -120,9 +121,21 @@ input:checked + .slider:before {
   padding: 2.8rem;
 }
 .pricing.active {
+  position: relative;
   background-color: #000000;
   color: #ffffff;
 }
+.pricing.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(26.57deg, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%);
+  transition: all 0.3s;
+}
+
 .pricing h5 {
   font-weight: 700;
   font-size: 24px;
@@ -150,6 +163,14 @@ input:checked + .slider:before {
   color: #ffffff;
   cursor: pointer;
 }
+.btn-active {
+  background-color: #ffffff;
+  color: #000000;
+}
+.btn-active:hover:focus {
+  background-color: #dfdfdf;
+  color: #000000;
+}
 
 .btn-right:hover:focus:active {
   color: #000000;
@@ -176,6 +197,30 @@ input:checked + .slider:before {
 }
 .table tbody tr td:not(:first-child) {
   text-align: center;
+}
+
+.pricing-link {
+  position: relative;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+.pricing-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.pricing-link:hover::before {
+  width: 100%;
+  opacity: 0.5;
 }
 @media (max-width: 768px) {
   .header-pricing {

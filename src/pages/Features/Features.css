@@ -1,10 +1,10 @@
 /*HEADER_FEATURES*/
-a {
+/*a {
   letter-spacing: 2px;
   font-size: 12px;
   text-decoration: none;
   color: #ffffff;
-}
+}*/
 .header-features {
   max-width: 100%;
   display: flex;

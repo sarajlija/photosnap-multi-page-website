@@ -51,7 +51,7 @@ function Pricing() {
             <p>More advanced features available. Recommended for photography veterans and professionals.</p>
             <h2>{switchState ? "$390" : "$39"}</h2>
             <small>per mount</small>
-            <Button href="#/" className="bg-light text-dark">
+            <Button href="#/" className="btn-active">
               PICK PLAN
             </Button>
           </div>
@@ -137,7 +137,9 @@ function Pricing() {
           <h1>We’re in beta. Get your invite today!</h1>
 
           <div className="justify-content-start">
-            <Link to="/">READ STORE</Link>
+            <Link className="pricing-link" to="/">
+              GET AN INVITE
+            </Link>
             <img className="ms-3" src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
           </div>
         </div>

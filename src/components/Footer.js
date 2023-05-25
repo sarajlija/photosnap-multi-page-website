@@ -25,7 +25,7 @@ function Footer() {
             </li>
             <li>
               {" "}
-              <Link to="/#features">features</Link>
+              <Link to="/features">features</Link>
             </li>
             <li>
               {" "}
@@ -53,7 +53,7 @@ function Footer() {
         </div>
         <div className="footer-links">
           <div>
-            <a href="/" className="get-link">
+            <a href="/" className="footer-link">
               GET AN INVITE
               <img className="ms-3" src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
             </a>

@@ -57,7 +57,9 @@ function Features() {
           <h1>We’re in beta. Get your invite today!</h1>
 
           <div className="features-link">
-            <Link to="/">READ STORE</Link>
+            <Link className="pricing-link" to="/">
+              GET AN INVITE
+            </Link>
             <img className="ms-3" src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
           </div>
         </div>

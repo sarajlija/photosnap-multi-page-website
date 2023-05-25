@@ -8,6 +8,12 @@ body {
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
 }
+a {
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #ffffff;
+}
 main {
   position: relative;
   z-index: 1;

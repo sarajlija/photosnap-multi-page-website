@@ -75,6 +75,30 @@ footer {
   opacity: 0.5;
 }
 
+.footer-link {
+  position: relative;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #000000;
+  transition: all 0.3s;
+}
+.footer-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.footer-link:hover::before {
+  width: 65%;
+  opacity: 0.5;
+}
+
 @media (max-width: 768px) {
   .footer-wrapper {
     padding: 4rem 3rem;
