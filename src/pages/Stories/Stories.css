@@ -27,6 +27,30 @@
   opacity: 0.6;
 }
 
+.stories-get-link {
+  align-self: flex-start;
+  position: relative;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+.stories-get-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.stories-get-link:hover::before {
+  width: 68%;
+  opacity: 0.5;
+}
 /*STORIES-GALLERY*/
 .stories-gallery {
   display: grid;

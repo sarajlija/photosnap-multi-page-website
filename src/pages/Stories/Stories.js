@@ -19,8 +19,8 @@ function Stories() {
             </small>
             <p>The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.</p>{" "}
             <div>
-              <Link to="/stories">
-                READ STORE <img src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
+              <Link to="/stories" className="stories-get-link">
+                READ THE STORY <img src="/assets/shared/desktop/arrow copy.svg" alt="arrow" />
               </Link>
             </div>
           </div>
